@@ -1,22 +1,3 @@
-.backGroundImages{
-    background-size: cover;
-    width: 100%;
-    left: 0;
-    background-position: center;
-    max-height: 100%;
-    max-width: 100%;
-    position: absolute;
-   
-   }
-
-.backGroundFirstImages{
-
-
-}
-
-
-
-
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300,700&display=swap');
 @use postcss-nested;
 

@@ -5,6 +5,7 @@ import { AppComponent } from './app.component';
 
 import { FormSearchComponent } from './shared/components/form-search/form-search.component';
 import { PanelComponent } from './shared/components/panel/panel.component';
+import { PicturesComponent } from './pages/pictures/pictures.component';
 
 
 
@@ -13,7 +14,8 @@ import { PanelComponent } from './shared/components/panel/panel.component';
   declarations: [
     AppComponent,
     FormSearchComponent,
-    PanelComponent
+    PanelComponent,
+    PicturesComponent
   
   ],
   imports: [
