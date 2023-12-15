@@ -1,3 +1,6 @@
+
+![b6740400-92d4-11ea-8a13-d5f6e0558e9b](https://github.com/mbarrerag/RickandMorty-API/assets/101472701/1baf52ab-17b9-4cbd-b565-a449a54e82c7)
+
 # RickandMortyAPI
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.2.0.
