@@ -7,6 +7,8 @@ import { FormSearchComponent } from './shared/components/form-search/form-search
 import { PanelComponent } from './shared/components/panel/panel.component';
 import { PicturesComponent } from './pages/pictures/pictures.component';
 
+import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
+
 
 
 
@@ -15,7 +17,8 @@ import { PicturesComponent } from './pages/pictures/pictures.component';
     AppComponent,
     FormSearchComponent,
     PanelComponent,
-    PicturesComponent
+    PicturesComponent,
+    PageNotFoundComponent
   
   ],
   imports: [
