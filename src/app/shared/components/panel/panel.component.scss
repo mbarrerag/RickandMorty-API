@@ -1,3 +1,5 @@
+
+
 .backGroundImages{
     background-size: cover;
     width: 100%;
@@ -8,38 +10,27 @@
     position: absolute;
    
    }
-
+   
    .tittle{
-    position: fixed;
+    position: absolute;
     z-index: 2;
     left: 20%;
-    align-items: center;
+    display:grid;
+    place-items: center;
     height: 50%;
     width: 60%;
    }
 
-   .rick{
-   
-    position: fixed;
-    z-index: 2;
-    top: 75%;
-    left: 0;
-    height: 20%;
-    width: 10%;
-   }
   
 
 .portal{
   align-items: center;
-  left: 35%;
+  left: 30%;
+  display:grid;
+  place-items: center;
   position: center;
-  position: fixed;
+  position: absolute;
+  height: 50%;
+  width: 30%;
 }
 
-.framework{
-  position: absolute;
-  padding: 10% ;
-  border: PowderBlue 5px solid;
-  border-radius: 20px;
-  top: 50%;
-}
