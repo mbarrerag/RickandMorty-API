@@ -9,7 +9,7 @@ import { PicturesComponent } from './pages/pictures/pictures.component';
 
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 import { SearchBarComponent } from './shared/components/search-bar/search-bar.component';
-
+import { HttpClientModule } from '@angular/common/http';
 
 
 
@@ -25,7 +25,8 @@ import { SearchBarComponent } from './shared/components/search-bar/search-bar.co
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+     HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
