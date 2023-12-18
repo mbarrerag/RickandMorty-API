@@ -12,6 +12,9 @@ import { CharacterListComponent } from './character-list.component';
   imports: [
     CommonModule,
     CharacterListRoutingModule
+  ],
+  exports: [
+    CharacterListComponent
   ]
 })
 export class CharacterListModule { }
