@@ -12,6 +12,10 @@ import { CharacterDetailsComponent } from './character-details.component';
   imports: [
     CommonModule,
     CharacterDetailsRoutingModule
+  ],
+  exports: [
+    CharacterDetailsComponent
   ]
+
 })
 export class CharacterDetailsModule { }

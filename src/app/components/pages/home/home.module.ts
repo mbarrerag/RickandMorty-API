@@ -18,6 +18,7 @@ import { CharacterDetailsComponent } from '../characters/character-details/chara
     HomeRoutingModule,
     CharactersModule,
   
+  
   ],
   schemas: [CUSTOM_ELEMENTS_SCHEMA]
 })
