@@ -1,31 +1,3 @@
-<!-- <div class="row">
-    <div class="col-xs-12 col-sm-6 col-md-4" *ngFor="let character of characters">
-       <div class="card">
-        <div class="image">
-            <a [routerLink]="['/character-details', character.id]">
-            <img [src]="character.image" [alt]="character.name" class="caard-img-top"/>
-            </a>
-        </div>
-        <div class="card-inner">
-            <div class="header">
-                <a [routerLink]="['/character-details', character.id]">
-                
-                <h2>{{character.name}}</h2>
-                </a>
-                <h4 class="text-muted">{{character.gender}}</h4>
-                <small class="text-muted">{{character.created}}</small>
-            </div>
-
-        </div>
-       </div>
-    </div>
-
-    <div class="col-xs-12 col-sm-12 col-md-11 mt-5 container-notFound">
-        No result
-    </div>
-</div>
-<button class="btn btn-dark">Go up</button> -->
-
 <div class="row">
     <div class="col-xs-12 col-sm-6 col-md-4 grid" *ngFor="let character of characters">
       <div class="card">
@@ -44,7 +16,7 @@
               <h2>{{ character.name }}</h2>
             </a>
             <h4 class="text-muted">{{ character.gender }}</h4>
-            <small class="text-muted">{{ character.created }}</small>
+            <small class="text-muted">{{ character.status }}</small>
           </div>
         </div>
       </div>

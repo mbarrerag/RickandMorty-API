@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { ActivatedRoute, ParamMap, Params } from '@angular/router';
 import { Character } from '@app/shared/components/interface/character.interface';
 import { CharacterService } from '@app/shared/services/character.service';
 import { take } from 'rxjs/operators';
@@ -26,23 +27,32 @@ export class CharacterListComponent {
   private maxValor = 10;
 
 
-  constructor(private characterSvc: CharacterService) {}
+  constructor(private characterSvc: CharacterService, private route: ActivatedRoute) {}
     
       ngOnInit(): void {
         this.getDataFromService();
+        this.getCharactersByQuery();
       }
 
+
+      private getCharactersByQuery(): void {
+          this.route.queryParams.pipe(take(1)).subscribe( (params:Params)  => {
+          this.query = params['q'];
+          console.log(this.query);
+          this.getDataFromService();
+        
+        });
+
+
+      }
       private getDataFromService(): void{
       
           
         this.characterSvc.searchCharacter(this.query, this.pageNum).pipe(take(1)).subscribe((res: any) => {
         const { info, results } = res;
-
+        if(res?.results?.length){
         
         this.characters = results.map((character: Character) => {
-          // Realizar la transformación deseada, si es necesario
-          // Por ejemplo, duplicar el valor de un atributo:
-          // character.attribute = character.attribute * 2;
           return character;
         });
 
@@ -51,6 +61,10 @@ export class CharacterListComponent {
         
         console.log(res.results);
         console.log("caracters",this.characters);
+      }
+      else {
+        this.characters = [];
+      }
     });
   }
 
