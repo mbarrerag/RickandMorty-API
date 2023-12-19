@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { DOCUMENT } from '@angular/common';
+import { Component, HostListener, Inject } from '@angular/core';
 import { ActivatedRoute, NavigationEnd, ParamMap, Params, Router } from '@angular/router';
 import { Character } from '@app/shared/components/interface/character.interface';
 import { CharacterService } from '@app/shared/services/character.service';
@@ -20,15 +21,15 @@ export class CharacterListComponent {
   };
 
   characters: Character[] = [];
+  showGoUpButton = false;
   private pageNum = 1;
   private query!: string;
   private hideScrollHeight = 200;
   private showScrollHeight = 500;
-  private maxValor = 10;
-  backGroundImages = 'https://wallpapercave.com/wp/Y0StpXn.jpg';
+    backGroundImages = 'https://wallpapercave.com/wp/Y0StpXn.jpg';
 
 
-  constructor(private router: Router, private characterSvc: CharacterService, private route: ActivatedRoute) {
+  constructor(private router: Router, private characterSvc: CharacterService, private route: ActivatedRoute, @Inject(DOCUMENT) private document: Document) {
     this.OnUrlChange();
    }
 
@@ -54,17 +55,40 @@ export class CharacterListComponent {
     this.getCharactersByQuery();
   }
 
+  @HostListener('window:scroll', [])
+  onWindowScroll():void {
+    const yOffSet = window.pageYOffset;
+    if ((yOffSet || this.document.documentElement.scrollTop || this.document.body.scrollTop) > this.showScrollHeight) {
+      this.showGoUpButton = true;
+    } else if (this.showGoUpButton && (yOffSet || this.document.documentElement.scrollTop || this.document.body.scrollTop) < this.hideScrollHeight) {
+      this.showGoUpButton = false;
+    }
+  }
 
+  
+
+  onScrollDown():void{
+    if (this.info.next) {
+      this.pageNum++;
+      this.getDataFromService();
+    }
+  }
+
+  onScrollTop():void{
+    this.document.body.scrollTop = 0; // Safari
+    this.document.documentElement.scrollTop = 0; // Other
+  }
+ 
   private getCharactersByQuery(): void {
     this.route.queryParams.pipe(take(1)).subscribe((params: Params) => {
+      console.log('Params->', params);
       this.query = params['q'];
-      console.log(this.query);
       this.getDataFromService();
-
     });
-
-
   }
+
+
+ 
   private getDataFromService(): void {
 
 

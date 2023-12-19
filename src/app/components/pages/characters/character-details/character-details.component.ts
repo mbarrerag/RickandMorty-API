@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Params } from '@angular/router';
 import { Character } from '@app/shared/components/interface/character.interface';
 import { CharacterService } from '@app/shared/services/character.service';
@@ -11,28 +11,27 @@ import { Location } from '@angular/common';
   styleUrls: ['./character-details.component.scss']
 })
 
-export class CharacterDetailsComponent {
+export class CharacterDetailsComponent implements OnInit {
   character$!: Observable<Character>
 
 
 
-constructor(private route:ActivatedRoute, private characterSvc:CharacterService, private location:Location) {}
+  constructor(private route: ActivatedRoute, private characterSvc: CharacterService, private location: Location) { }
+  ngOnInit(): void {
 
-ngOnIni(): void {
+    this.route.params.pipe(take(1)).subscribe((params: Params) => {
+      const id = params['id'];
+      this.character$ = this.characterSvc.getDetails(id);
 
 
-this.route.params.pipe(take(1)).subscribe((params: Params) => {
-  const id = params['id'];
-  this.character$ = this.characterSvc.getDetails(id);
-  
 
-  });
-}
+    });
+  }
 
-onGoBack(): void {
-  this.location.back();
+  onGoBack(): void {
+    this.location.back();
 
-}
+  }
 
 }
 
