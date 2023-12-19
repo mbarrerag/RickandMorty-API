@@ -44,17 +44,25 @@ export class PanelComponent {
       const percentX = (event.clientX - rect.left) / rect.width;
       const percentY = (event.clientY - rect.top) / rect.height;
 
-      // Use translate and percentage values for flexibility
+      // Limit movement to a certain range (adjust as needed)
+      const maxX = 200; // Maximum horizontal movement in pixels
+      const maxY = 50; // Maximum vertical movement in pixels
+
+      // Calculate translated values within the specified range
+      const translateX = Math.min(Math.max(percentX * maxX, -maxX), maxX);
+      const translateY = Math.min(Math.max(percentY * maxY, -maxY), maxY);
+
+      // Use translate with limited values
       this.renderer.setStyle(
         imgElement,
         'transform',
-        `translate(${percentX * 50}px, ${percentY * 50}px)`
+        `translate(${translateX}px, ${translateY}px)`
       );
+
+
+
+
     }
-
-
-
-
 
     }
 
