@@ -1,14 +1,7 @@
-.backGroundImages{
-    background-size: cover;
-    width: 100%;
-    top: 0;
-    left: 0;
-    background-position: center;
-    max-height: 100%;
-    max-width: 100%;
-    position: absolute;
-   
-   }
+.background{
+  background-image: url(https://wallpapercave.com/wp/Y0StpXn.jpg);
+}
+
    
    .tittle{
     position: absolute;
@@ -18,7 +11,8 @@
     place-items: center;
     height: 50%;
     width: 60%;
-   }
+    top: 0;
+  }
 
   
 
@@ -34,20 +28,3 @@
 }
 
 
-.search-bar{
-  position: absolute;
-  top: 120%;
-  width: 70%;
-  display: grid;
-  place-items: center;
- 
- 
-}
-.search-div{
-  display: grid;
-  place-items: center;
- 
-}
-.button{
-height: 80%; 
-}

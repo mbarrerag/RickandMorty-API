@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { ActivatedRoute, ParamMap, Params } from '@angular/router';
+import { ActivatedRoute, ParamMap, Params, Router } from '@angular/router';
 import { Character } from '@app/shared/components/interface/character.interface';
 import { CharacterService } from '@app/shared/services/character.service';
 import { take } from 'rxjs/operators';
@@ -25,10 +25,19 @@ export class CharacterListComponent {
   private hideScrollHeight = 200;
   private showScrollHeight = 500;
   private maxValor = 10;
+  backGroundImages = 'https://wallpapercave.com/wp/Y0StpXn.jpg';
 
 
-  constructor(private characterSvc: CharacterService, private route: ActivatedRoute) {}
-    
+  constructor(private router: Router, private characterSvc: CharacterService, private route: ActivatedRoute) {}
+  
+  onSearch(value: string) {
+
+    console.log(value);
+     if (value && value.length > 3) {
+       this.router.navigate(['/character-list'], { queryParams: { q: value } });
+     }
+      
+    }
       ngOnInit(): void {
         this.getDataFromService();
         this.getCharactersByQuery();
