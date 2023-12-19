@@ -6,6 +6,7 @@ import { HomeComponent } from './home.component';
 import { PanelComponent } from '@app/shared/components/panel/panel.component';
 import { CharactersModule } from '../characters/characters.module';
 import { CharacterDetailsComponent } from '../characters/character-details/character-details.component';
+import { PanelModule } from '@app/shared/components/panel/panel.module';
 
 
 
@@ -17,9 +18,9 @@ import { CharacterDetailsComponent } from '../characters/character-details/chara
     CommonModule,
     HomeRoutingModule,
     CharactersModule,
+    PanelModule
   
   
   ],
-  schemas: [CUSTOM_ELEMENTS_SCHEMA]
 })
 export class HomeModule { }
