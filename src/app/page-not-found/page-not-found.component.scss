@@ -32,10 +32,12 @@ body {
   .page_404__mainText {
     text-align: center;
     font-weight: 900;
+    color: #fff;
     font-size: 26px;
   }
   .page_404__zirkaAndry_img {
-    width: 65vh;
+    height: 50%;
+    width: 50%;
     margin: 0 auto;
   }
   .page_404__text {
@@ -45,6 +47,7 @@ body {
     font-size: 15px;
     text-align: center;
     margin: 15px auto 25px;
+    color: #fff;
   }
   
   .page_404__link {
@@ -53,7 +56,7 @@ body {
     height: 56px;
     line-height: 56px;
     border-radius: 10px;
-    border: 2px solid #000000;
+    border: 2px solid #fdf510;
     text-align: center;
     margin: 15px auto;
     font-family: "Montserrat-Bold", "Montserrat", sans-serif;
