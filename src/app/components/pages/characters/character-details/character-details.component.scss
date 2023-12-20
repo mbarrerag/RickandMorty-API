@@ -1,11 +1,38 @@
-.character-features{
-    top: 0;
-    float: right;
-}
+.character-features {
+    display: grid;
+    place-items: center;
+    margin-top: 10%;
+    line-height: 60px;  // Ajusta este valor para el espacio entre líneas
+    
+  
+    h2, h4 {
+      margin-bottom: 10px;  // Ajusta este valor para el espacio entre los elementos h2 y h4
+    }
+  
+    a {
+      color: inherit;  // Mantén el color del texto como está o ajusta según sea necesario
+      text-decoration: none;  // Quita el subrayado del enlace
+      transition: color 0.3s ease-in-out;  // Agrega transición para el color del texto
+  
+      &:hover {
+        color: goldenrod;  // Cambia el color del texto a dorado en hover
+      }
+    }
+  }
+  
+  
 .text{
     color: white;
 }
 
+.img-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10%;
+    
+
+}
 
 .button-back {
     display: block;

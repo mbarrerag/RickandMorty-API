@@ -1,5 +1,5 @@
 <div class="row" *ngIf="character$ | async as character">
-  <div class="col-xs-8 col-sm-4 col-md-5 grid justidy-content-center">
+  <div class="justidy-content-center">
     <div class="character-container">
       <div class="img-container">
         <img [src]="character.image" [alt]="character.name" class="character-img" />
@@ -12,6 +12,7 @@
         <h4 class="text">Species: {{ character.species }}</h4>
         <h4 class="text">Creation date: {{ character.created | date }}</h4>
         <h4 class="text">Origin location: {{ character.origin.name }}</h4>
+        <h4 class="text">Location: {{ character.location.name }}</h4>
       </div>
     </div>
   </div>

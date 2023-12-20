@@ -4,12 +4,13 @@ import { Character } from "@app/shared/components/interface/character.interface"
 @Component({
   selector: "app-character",
   template:  `
+   <a [routerLink]="['/character-details', character.id]">
   <div class="card mb-5">
  
 
 
 
-               <h2 class="name">{{ character.name | slice:0:15 }}</h2>
+            <h2 class="name">{{ character.name | slice:0:15 }}</h2>
          
         <div class="image">
           <a [routerLink]="['/character-details', character.id]">
@@ -32,6 +33,7 @@ import { Character } from "@app/shared/components/interface/character.interface"
           </div>
         </div>
       </div>
+      </a>
    `,
   changeDetection: ChangeDetectionStrategy.OnPush,
     styleUrls: ["./character.component.scss"],
