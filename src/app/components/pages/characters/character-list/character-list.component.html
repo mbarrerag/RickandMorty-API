@@ -16,8 +16,8 @@
       <p>No results.......</p>
     </div>
   </div>
-  <button 
-  clas="btn btn-dark">
+  <button *ngIf="showGoUpButton" (click)="onScrollTop()" [ngClass]="'no-hidden button-up' "
+  clas="button-up">
     Go UP
 
   </button>

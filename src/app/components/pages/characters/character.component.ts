@@ -5,6 +5,12 @@ import { Character } from "@app/shared/components/interface/character.interface"
   selector: "app-character",
   template:  `
   <div class="card mb-5">
+ 
+
+
+
+               <h2 class="name">{{ character.name | slice:0:15 }}</h2>
+         
         <div class="image">
           <a [routerLink]="['/character-details', character.id]">
             <img
@@ -15,17 +21,21 @@ import { Character } from "@app/shared/components/interface/character.interface"
           </a>
         </div>
         <div class="card-inner">
-          <div class="header">
-            <a [routerLink]="['/character-details', character.id]">
-              <h2>{{ character.name | slice:0:15 }}</h2>
-            </a>
-            <h4 class="text-muted">{{ character.gender }}</h4>
-            <small class="text-muted">{{ character.created | date}}</small>
+          <div class="information">
+           
+               
+
+            <h2 >Species: {{ character.species | slice:0:15 }}</h2>
+            <h2 [ngClass]="{'alive': character.status === 'Alive', 'dead': character.status === 'Dead' }">Status: {{ character.status | slice:0:15 }}</h2>
+            <h2 >Gender: {{ character.gender }}</h2>
+            <h2 >{{ character.created | date}}</h2>
           </div>
         </div>
       </div>
    `,
   changeDetection: ChangeDetectionStrategy.OnPush,
+    styleUrls: ["./character.component.scss"],
+
   //Take uput of the tree of components so i will manually will update
 })
 

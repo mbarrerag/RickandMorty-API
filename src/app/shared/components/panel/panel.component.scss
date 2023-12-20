@@ -44,3 +44,15 @@
 }
 
 
+@media(max-width: 768px) {
+  .card{
+    opacity: 0.8;
+  }
+  .portal{
+    visibility: hidden;
+
+  }
+  .game{
+    visibility: hidden;
+  }
+}

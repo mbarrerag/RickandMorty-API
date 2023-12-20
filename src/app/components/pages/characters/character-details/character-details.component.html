@@ -1,29 +1,19 @@
+<div class="row" *ngIf="character$ | async as character">
+  <div class="col-xs-8 col-sm-4 col-md-5 grid justidy-content-center">
+    <div class="character-container">
+      <div class="img-container">
+        <img [src]="character.image" [alt]="character.name" class="character-img" />
+      </div>
 
-<div class="row" *ngIf="character$|async as character">
-    <div class="col-xs-8 col-sm-4 col-md-7 grid justidy-content-center" >
-      <div class="card">
-        <div class="image">
-        
-            <img
-              [src]="character.image"
-              [alt]="character.name"
-              class="card-img-top"
-            />
-    
-        </div>
-        <div class="card-inner">
-          <div class="header">
-            <a [routerLink]="['/character-details', character.id]">
-              <h2>{{ character.name | slice:0:15 }}</h2>
-            </a>
-            <h4 class="text-muted">{{ character.gender }}</h4>
-            <small class="text-muted">{{ character.created | date}}</small>
-          </div>
-        </div>
+
+      <div class="character-features">
+        <h2 class="text">{{ character.name | slice:0:15 }}</h2>
+        <h4 class="text">Gender: {{ character.gender }}</h4>
+        <h4 class="text">Species: {{ character.species }}</h4>
+        <h4 class="text">Creation date: {{ character.created | date }}</h4>
+        <h4 class="text">Origin location: {{ character.origin.name }}</h4>
       </div>
     </div>
- 
   </div>
-  <button (click)="onGoBack" clas="btn btn-dark">
-    BACK
-  </button>
+</div>
+<button (click)="onGoBack()" class="button-back">BACK</button>

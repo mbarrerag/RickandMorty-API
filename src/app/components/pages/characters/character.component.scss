@@ -1,0 +1,37 @@
+
+.card {
+    border-radius: 10px;  // Ajusta el valor según la curvatura deseada
+    background-color: #141415;
+    border: 2px solid white;
+    transition: border-color 0.3s ease-in-out;  // Agrega una transición suave para el color del borde
+  
+    &:hover {
+      border-color: #00ff04;  // Cambia el color del borde en hover
+    }
+  }
+  
+.name{
+    font-size: 130%;
+    display: grid;
+    place-items: center;
+    color: white;
+}
+.image{
+    padding: 5%;
+
+}
+
+.information, h2{
+    font-size: 100%;
+    color: white;
+    display: grid;
+    place-items: center;
+   
+}
+.alive {
+    color: green;  /* Puedes ajustar el estilo según tus preferencias */
+  }
+  
+  .dead {
+    color: red;    /* Puedes ajustar el estilo según tus preferencias */
+  }
