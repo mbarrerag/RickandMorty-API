@@ -3,7 +3,8 @@
     place-items: center;
     margin-top: 10%;
     line-height: 60px;  // Ajusta este valor para el espacio entre líneas
-    
+    border: solid 2px #fff;  // Ajusta el color y el grosor del borde
+    margin-bottom: 5%;
   
     h2, h4 {
       margin-bottom: 10px;  // Ajusta este valor para el espacio entre los elementos h2 y h4
@@ -24,12 +25,19 @@
 .text{
     color: white;
 }
+.character-img {
+    border: solid 5px #00bbff;  /* Ajusta el color y el grosor del borde */
+    transition: border-color 0.3s ease;  /* Agrega una transición suave al color del borde */
+}
 
+.character-img:hover {
+    border-color: #ff9900;  /* Cambia el color del borde al hacer hover */
+}
 .img-container{
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-top: 10%;
+    margin-top: 8%;
     
 
 }
