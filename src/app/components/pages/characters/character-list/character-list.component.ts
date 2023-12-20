@@ -71,7 +71,7 @@ export class CharacterListComponent {
     if (this.info.next) {
       this.pageNum++;
       this.getDataFromService();
-      console.log(this.pageNum);
+      console.log("Number of pages",this.pageNum);
   
     }
   }

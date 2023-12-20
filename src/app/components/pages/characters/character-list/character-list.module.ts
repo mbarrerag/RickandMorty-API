@@ -3,18 +3,18 @@ import { CommonModule } from '@angular/common';
 
 import { CharacterListRoutingModule } from './character-list-routing.module';
 import { CharacterListComponent } from './character-list.component';
+import { CharactersModule } from '../characters.module';
 
 
 @NgModule({
   declarations: [
-    CharacterListComponent
   ],
   imports: [
     CommonModule,
-    CharacterListRoutingModule
-  ],
-  exports: [
-    CharacterListComponent
+    CharacterListRoutingModule,
+ 
+
+
   ]
 })
 export class CharacterListModule { }

@@ -7,6 +7,9 @@ import { PanelComponent } from '@app/shared/components/panel/panel.component';
 import { CharactersModule } from '../characters/characters.module';
 import { CharacterDetailsComponent } from '../characters/character-details/character-details.component';
 import { PanelModule } from '@app/shared/components/panel/panel.module';
+import { CharacterListComponent } from '../characters/character-list/character-list.component';
+import { CharacterDetailsModule } from '../characters/character-details/character-details.module';
+import { CharacterListModule } from '../characters/character-list/character-list.module';
 
 
 
@@ -19,6 +22,7 @@ import { PanelModule } from '@app/shared/components/panel/panel.module';
     HomeRoutingModule,
     CharactersModule,
     PanelModule
+    
   
   
   ],

@@ -3,29 +3,11 @@
   <div class="search-div" >
     <input #inputSearch (keyup)="onSearch(inputSearch.value)" type="text" class="search-bar" placeholder="Search..">
   </div>
+
  
 <div class="row" infinite-scroll (scrolled)="onScrollDown()">
     <div class="col-xs-8 col-sm-4 col-md-3 grid" *ngFor="let character of characters" >
-      <div class="card">
-        <div class="image">
-          <a [routerLink]="['/character-details', character.id]">
-            <img
-              [src]="character.image"
-              [alt]="character.name"
-              class="card-img-top"
-            />
-          </a>
-        </div>
-        <div class="card-inner">
-          <div class="header">
-            <a [routerLink]="['/character-details', character.id]">
-              <h2>{{ character.name | slice:0:15 }}</h2>
-            </a>
-            <h4 class="text-muted">{{ character.gender }}</h4>
-            <small class="text-muted">{{ character.created | date}}</small>
-          </div>
-        </div>
-      </div>
+    <app-character [character]="character"></app-character>
     </div>
     <div
       class="col-xs-12 col-sm-12 col-md-12 mt-5 container-notFound"

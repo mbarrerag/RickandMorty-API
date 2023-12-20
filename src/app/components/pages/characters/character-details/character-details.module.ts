@@ -7,14 +7,11 @@ import { CharacterDetailsComponent } from './character-details.component';
 
 @NgModule({
   declarations: [
-    CharacterDetailsComponent
+
   ],
   imports: [
     CommonModule,
     CharacterDetailsRoutingModule
-  ],
-  exports: [
-    CharacterDetailsComponent
   ]
 
 })
