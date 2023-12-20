@@ -92,23 +92,18 @@ export class CharacterListComponent {
 
  
   private getDataFromService(): void {
-
-
     this.characterSvc.searchCharacter(this.query, this.pageNum).pipe(take(1)).subscribe((res: any) => {
       const { info, results } = res;
+      
       if (res?.results?.length) {
-
-        this.characters = results.map((character: Character) => {
-          return character;
-        });
-
-
+        // Append new characters to the existing array
+        this.characters = [...this.characters, ...results.map((character: Character) => character)];
         this.info = info;
-      }
-      else {
+      } else {
+        // Handle the case when there are no results
         this.characters = [];
       }
     });
   }
-
+  
 }

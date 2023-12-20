@@ -4,7 +4,7 @@ import { Character } from "@app/shared/components/interface/character.interface"
 @Component({
   selector: "app-character",
   template:  `
-  <div class="card">
+  <div class="card mb-5">
         <div class="image">
           <a [routerLink]="['/character-details', character.id]">
             <img
