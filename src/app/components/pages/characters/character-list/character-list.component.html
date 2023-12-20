@@ -4,8 +4,8 @@
     <input #inputSearch (keyup)="onSearch(inputSearch.value)" type="text" class="search-bar" placeholder="Search..">
   </div>
  
-<div class="row">
-    <div class="col-xs-8 col-sm-4 col-md-3 grid" *ngFor="let character of characters"  infinite-scroll (scrolled)="onScrollDown">
+<div class="row" infinite-scroll (scrolled)="onScrollDown()">
+    <div class="col-xs-8 col-sm-4 col-md-3 grid" *ngFor="let character of characters" >
       <div class="card">
         <div class="image">
           <a [routerLink]="['/character-details', character.id]">
@@ -34,7 +34,8 @@
       <p>No results.......</p>
     </div>
   </div>
-  <button clas="btn btn-dark">
+  <button 
+  clas="btn btn-dark">
     Go UP
 
   </button>

@@ -51,13 +51,13 @@ export class CharacterListComponent {
 
   }
   ngOnInit(): void {
-    this.getDataFromService();
+
     this.getCharactersByQuery();
   }
 
   @HostListener('window:scroll', [])
   onWindowScroll():void {
-    const yOffSet = window.pageYOffset;
+    const yOffSet = window.pageYOffset
     if ((yOffSet || this.document.documentElement.scrollTop || this.document.body.scrollTop) > this.showScrollHeight) {
       this.showGoUpButton = true;
     } else if (this.showGoUpButton && (yOffSet || this.document.documentElement.scrollTop || this.document.body.scrollTop) < this.hideScrollHeight) {
@@ -71,6 +71,8 @@ export class CharacterListComponent {
     if (this.info.next) {
       this.pageNum++;
       this.getDataFromService();
+      console.log(this.pageNum);
+  
     }
   }
 
@@ -102,9 +104,6 @@ export class CharacterListComponent {
 
 
         this.info = info;
-
-        console.log(res.results);
-        console.log("caracters", this.characters);
       }
       else {
         this.characters = [];
