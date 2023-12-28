@@ -15,14 +15,7 @@ export class PanelComponent {
   game = 'https://s3-us-west-2.amazonaws.com/s.cdpn.io/1055214/Rick-Spaceship.png'
 
   constructor(private router: Router, private el: ElementRef, private renderer: Renderer2) { }
-  onSearch(value: string) {
 
-    console.log(value);
-     if (value && value.length > 3) {
-       this.router.navigate(['/character-list'], { queryParams: { q: value } });
-     }
-      
-    }
 
     private isMouseOver = false;
 
