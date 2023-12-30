@@ -6,9 +6,6 @@
 
 
 <div class="container" (scroll)="onWindowScroll()">
-  <div class="search-div">
-    <input #inputSearch (keyup)="onSearch(inputSearch.value)" type="text" class="search-bar" placeholder="Search..">
-  </div>
 
   <div class="row">
     <div class="col-xs-8 col-sm-4 col-md-3 grid" *ngFor="let character of characters">
