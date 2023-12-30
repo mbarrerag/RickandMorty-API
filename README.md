@@ -1,13 +1,19 @@
 
+
+
 ![b6740400-92d4-11ea-8a13-d5f6e0558e9b](https://github.com/mbarrerag/RickandMorty-API/assets/101472701/1baf52ab-17b9-4cbd-b565-a449a54e82c7)
+
+Link: https://rickand-morty-api-j4xy.vercel.app/home
+
 
 # RickandMortyAPI
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.2.0.
+
+This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.2.0. And the deployment was made in Verce
 
 ## Development server
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files. But remember to use the `npm install`
 
 ## Code scaffolding
 
